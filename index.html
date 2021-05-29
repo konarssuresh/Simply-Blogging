@@ -73,7 +73,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <form id="addBlogForm" class="row g-3 needs-validation" novalidate>
+          <form id="addBlogForm">
             <div class="modal-body">
               <div class="mb-3">
                 <label for="blogTitle" class="form-label">Title</label>
@@ -84,7 +84,6 @@
                   placeholder="Add title here"
                   required
                 />
-                <div class="invalid-feedback">Please add articles for blog</div>
               </div>
               <div class="mb-3">
                 <label for="blogArticle" class="form-label">Article</label>
@@ -95,7 +94,16 @@
                   placeholder="Add article here"
                   required
                 ></textarea>
-                <div class="invalid-feedback">Please add articles for blog</div>
+              </div>
+              <div class="mb-3">
+                <label for="blogImage" class="form-label">Image</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="blogImage"
+                  placeholder="Add image url here"
+                  required
+                />
               </div>
             </div>
             <div class="modal-footer">
@@ -106,7 +114,11 @@
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-primary">
+              <button
+                type="submit"
+                data-bs-dismiss="modal"
+                class="btn btn-primary"
+              >
                 Save changes
               </button>
             </div>
