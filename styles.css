@@ -22,6 +22,7 @@ img {
 }
 
 body {
+  font-family: "Yanone Kaffeesatz", sans-serif !important;
   background: #c6ffdd; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
