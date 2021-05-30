@@ -10,6 +10,7 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Simply Blogging</title>
   </head>
   <body>
@@ -42,10 +43,10 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#blogs">Blogs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#aboutUs">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
@@ -55,6 +56,26 @@
         </div>
       </div>
     </nav>
+
+    <div class="p-5 mb-4 homeJumbotron">
+      <div class="container-fluid py-5">
+        <h4 class="display-5 fw-bold">Simply Blogging</h4>
+        <p class="fs-4">
+          This is a mock blog post website which was created as part of one
+          assignment. Added 3 blog posts by default. You can add more by using
+          Add Blog option.
+        </p>
+        <button
+          class="btn btn-primary btn-lg"
+          data-bs-toggle="modal"
+          data-bs-target="#addBlogModal"
+          type="button"
+        >
+          Add Blog
+        </button>
+        <a class="btn btn-success btn-lg" href="#blogs">View Blogs</a>
+      </div>
+    </div>
     <div
       class="modal fade"
       id="addBlogModal"
@@ -112,21 +133,93 @@
                 class="btn btn-secondary"
                 data-bs-dismiss="modal"
               >
-                Close
+                Cancel
               </button>
-              <button
-                type="submit"
-                data-bs-dismiss="modal"
-                class="btn btn-primary"
-              >
-                Save changes
-              </button>
+              <button type="submit" class="btn btn-primary">Add</button>
             </div>
           </form>
         </div>
       </div>
     </div>
 
+    <div class="container">
+      <h2 id="blogs">Popular Blogs</h2>
+      <hr />
+      <div class="row" id="blogRow"></div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-dark text-muted">
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Simply Blogging
+              </h6>
+              <p id="aboutUs">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                animi nam consequuntur. Molestias fugiat repellat aut beatae
+                dolores totam voluptatibus recusandae ipsa, repudiandae alias
+                ducimus velit odit deserunt voluptate quisquam!
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="#">Simply Blogging</a>
+      </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -137,6 +230,6 @@
       integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

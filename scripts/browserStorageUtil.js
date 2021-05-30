@@ -32,4 +32,4 @@ const BrowserStorageUtil = (storage) => {
 };
 
 const localStorageUtil = BrowserStorageUtil(localStorage);
-export {localStorageUtil, sessionStorageUtil};
+export {localStorageUtil};
