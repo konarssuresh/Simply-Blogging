@@ -47,8 +47,9 @@ const getBlogHtml = ({id, title, imageUrl, article}) => `
             <h5 class="modal-title" id="exampleModalLabel">${title}</h5>
           </div>
 
-          <div class="modal-body">
+          <div class="modal-body">          
           <p class="card-text blogContentModal" >${article}</p>
+          <img src="${imageUrl}" class="img img-fluid" alt="${title}">
           </div>
           <div class="modal-footer">
             <button
